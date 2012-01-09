@@ -1,3 +1,6 @@
 CakeOSM
 
-Helper para usar OpenStreetMap (OSM) es CakePHP
+Helper para usar OpenStreetMap (OSM) con CakePHP
+
+Ejemplo uso:
+http://cakeosm.javiermaties.com/
