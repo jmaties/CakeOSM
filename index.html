@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cakeosm : A openstreetmaps integrated application built on CakePHP framework" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Cakeosm</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jmaties/CakeOSM">View on GitHub</a>
+
+          <h1 id="project_title">Cakeosm</h1>
+          <h2 id="project_tagline">A openstreetmaps integrated application built on CakePHP framework</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jmaties/CakeOSM/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jmaties/CakeOSM/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>CakeOSM</h1>
+
+<p>Helper para usar OpenStreetMap (OSM) con CakePHP</p>
+
+<p>De principio hemos dado soporte para poder mostrar los mapas con OpenLayers, CloudMade, y Leftlet.</p>
+
+<p>Su uso es muy sencillo, se descarga el helper y se instala en la app de cakephp, se activa, la mejor forma es desde el AppController y se llama desde cualquier vista de la siguiente forma:</p>
+
+<p>echo $this-&gt;OpenLayers-&gt;map($default, $style = 'width:100%; height: 100%', $tipo);</p>
+
+<p>Siendo $default un array con los siguientes posibles valores:</p>
+
+<pre><code>'typecloud' -&gt; el estilo de mapa
+'zoom' -&gt; zoom del mapa
+'lat' =&gt; latitud del centro del mapa
+'long' -&gt; longitud del centro del mapa
+</code></pre>
+
+<p>Y $tipo tendria estos posibles valores:</p>
+
+<pre><code> NULL (para usar directamente openlayers)
+cloudmade
+leaflet
+</code></pre>
+
+<p>Además esta preparado para recibir puntos de interes(POI), vamos, los "markers" de googlemaps:</p>
+
+<p>echo $this-&gt;OpenLayers-&gt;addmarkers($marca,null,$tipo);</p>
+
+<p>Donde $marca es un array con el punto y con estos valores:</p>
+
+<pre><code>lat -- latitud del punto
+long -- longitud del punto
+title -- titulo que aparece en la infowindow
+</code></pre>
+
+<p>$tipo debe ser la misma variable de antes, con el mismo valor.</p>
+
+<p><a href="http://cakeosm.javiermaties.com/">Ejemplo de uso</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cakeosm maintained by <a href="https://github.com/jmaties">jmaties</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
